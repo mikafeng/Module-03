@@ -1,7 +1,7 @@
 
 var characterLength = 8;
 var choiceArray = [];
-
+var btnClick = document.getElementById('generate');
 
 //Possible characters for generating password
 var specialCharacterArray = ['!', '#', '$', "%", '&', '^', '*', '(', ')'];
@@ -9,7 +9,7 @@ var lowerCaseArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
 var upperCaseArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-function generatePassword();
+
 
 function getPrompt() {
     characterLength = parseInt(prompt('Choose between 8 to 20 characters for your password.'));
@@ -38,10 +38,6 @@ function getPrompt() {
 
 }   
 
-var generateBtn = document.getElementById('generate');
-generateBtn.addEventListener('click', writePassword);
-
-
 
 
 //function to generate a random password with characters selected by user
@@ -50,17 +46,19 @@ function generatePassword () {
     for(var i = 0; i< characterLength; i++) {
       var randomIndex = Math.floor(Math.random() * choiceArray.length);
       newPassword = newPassword + choiceArray[randomIndex];
+      console.log(newPassword);
   }  
-   return password;
+   document.getElementById('password').value = newPassword;
   }
 
-var btnClick = document.getElementById('generate');
 
 
-function writePassword();{
+function writePassword(){
         getPrompt();
    var password = generatePassword();
    var newPassword = document.getElementById('password');
 
-   newPassword.value = password;
+  //  newPassword.value = password;
 }
+
+btnClick.addEventListener('click', writePassword);
