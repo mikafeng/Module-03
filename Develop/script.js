@@ -15,12 +15,12 @@ var numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var generateBtn = document.querySelector("#generate");
 
 
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
+    getPrompt();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -28,8 +28,16 @@ function writePassword() {
 
 }
 
+function generatePassword () {
+  var newPassword = "";
+  for(var i = 0; i< characterLength; i++) {
+    var randomIndex = Math.floor(Math.random() * choiceArray.length);
+    newPassword = newPassword + choiceArray[randomIndex];
+  }
+  return password
+}
 
-
+console.log(password);
 
 function getPrompt() {
   characterLength = parseInt(prompt('Choose between 8 to 20 characters for your password.'));
@@ -58,6 +66,5 @@ function getPrompt() {
 
 }
 
-function generatePassword ()
-{
-}
+
+ 
