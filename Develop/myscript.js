@@ -46,9 +46,9 @@ function generatePassword () {
     for(var i = 0; i< characterLength; i++) {
       var randomIndex = Math.floor(Math.random() * choiceArray.length);
       newPassword = newPassword + choiceArray[randomIndex];
-      console.log(randomIndex);
+      console.log(newPassword);
   }  
-   document.getElementById('password').value = newPassword
+   document.getElementById('password').value = newPassword;
   }
 
 
@@ -58,8 +58,7 @@ function writePassword(){
    var password = generatePassword();
    var newPassword = document.getElementById('password');
 
-   newPassword.value = password;
+  //  newPassword.value = password;
 }
 
 btnClick.addEventListener('click', writePassword);
-//INNERHTML??
