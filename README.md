@@ -4,6 +4,7 @@
 PAW is a javascript password generator that allows a user to generate a random password following a series of prompts.
 Users are able to choose whether or not the password will include special characters, numbers, lowercase and uppercase alphabetical characters as well as the length of the password.
 
+LINK: https://mikafeng.github.io/Module-03--PAW/ 
 ## Screenshot
 
 
