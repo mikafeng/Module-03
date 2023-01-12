@@ -6,8 +6,7 @@ Users are able to choose whether or not the password will include special charac
 
 LINK: https://mikafeng.github.io/Module-03--PAW/ 
 ## Screenshot
-
-
+![image](https://user-images.githubusercontent.com/110942241/212162836-319b0483-2bf6-49cf-a2dc-5e0308fea444.png)
 
 ## Using PAW
 
