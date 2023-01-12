@@ -8,7 +8,7 @@ Users are able to choose whether or not the password will include special charac
 
 
 
-## Using PAWS
+## Using PAW
 
 To use PAW, follow these steps:
 
